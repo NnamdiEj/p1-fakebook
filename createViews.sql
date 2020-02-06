@@ -10,20 +10,20 @@ CREATE VIEW VIEW_USER_INFORMATION AS
            C.CITY_NAME AS CURRENT_CITY,
            C.STATE_NAME AS CURRENT_STATE,
            C.COUNTRY_NAME AS CURRENT_COUNTRY,
-           C2.CITY_NAME AS HOMETOWN_CITY,
-           C2.STATE_NAME AS HOMETOWN_STATE,
-           C2.COUNTRY_NAME AS HOMETOWN_COUNTRY,
+           C.CITY_NAME AS HOMETOWN_CITY,
+           C.STATE_NAME AS HOMETOWN_STATE,
+           C.COUNTRY_NAME AS HOMETOWN_COUNTRY,
            P.INSTITUTION AS INSTITUTION_NAME,
            E.PROGRAM_YEAR AS PROGRAM_YEAR,
            P.CONCENTRATION AS PROGRAM_CONCENTRATION,
            P.DEGREE AS PROGRAM_DEGREE
     FROM
-         Users U, Cities C, Cities C2, User_Current_Cities UC, User_Hometown_Cities UH, Programs P, Education E
+         Users U, Cities C, User_Current_Cities UC, User_Hometown_Cities UH, Programs P, Education E
     WHERE
           U.USER_ID = UC.USER_ID AND
           U.USER_ID = UH.USER_ID AND
-          C.CITY_ID = UC.CITY_ID AND
-          C2.CITY_ID = UH.CITY_ID AND
+          C.CITY_ID = UC.CURRENT_CITY_ID AND
+          C.CITY_ID = UH.HOMETOWN_CITY_ID AND
           U.USER_ID = E.USER_ID AND
           E.PROGRAM_ID = P.PROGRAM_ID;
 
