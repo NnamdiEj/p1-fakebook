@@ -11,3 +11,4 @@ DROP TABLE Participants;
 DROP TABLE Albums;
 DROP TABLE Photos;
 DROP TABLE Tags;
+DROP TRIGGER order_friends_pairs;
