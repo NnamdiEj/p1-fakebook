@@ -8,6 +8,8 @@ DROP TABLE Albums;
 DROP TABLE Participants;
 DROP TABLE User_Events;
 DROP TABLE Education;
+DROP SEQUENCE program_id_seq;
+DROP TRIGGER program_id_trigger;
 DROP TABLE Programs;
 DROP TABLE Messages;
 DROP TABLE User_Hometown_Cities;
