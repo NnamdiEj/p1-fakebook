@@ -9,7 +9,7 @@ INSERT INTO
            MONTH_OF_BIRTH,
            DAY_OF_BIRTH,
            GENDER)
-SELECT
+SELECT DISTINCT
        USER_ID,
        FIRST_NAME,
        LAST_NAME,
