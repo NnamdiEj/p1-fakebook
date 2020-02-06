@@ -12,6 +12,8 @@ DROP TABLE Programs;
 DROP TABLE Messages;
 DROP TABLE User_Hometown_Cities;
 DROP TABLE User_Current_Cities;
+DROP SEQUENCE city_id_seq;
+DROP TRIGGER city_id_trigger;
 DROP TABLE Cities;
 DROP TRIGGER order_friends_pairs;
 DROP TABLE Friends;
