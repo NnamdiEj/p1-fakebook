@@ -9,6 +9,6 @@ DROP TABLE Messages;
 DROP TABLE User_Hometown_Cities;
 DROP TABLE User_Current_Cities;
 DROP TABLE Cities;
+DROP TRIGGER order_friends_pairs;
 DROP TABLE Friends;
 DROP TABLE Users;
-DROP TRIGGER order_friends_pairs;
